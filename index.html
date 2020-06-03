@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Icon for window -->
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2904/2904128.svg">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Link to D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Link to plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Biodiversity Dashboard</title>
+</head>
+<body class="bg-light">
+<!--     Jumbotron header -->
+    <section id="header" class="jumbotron text-center bg-danger">
+        <h1 class="display-3 font-weight-bold">Biodiversity Dashboard</h1>
+        <p class="lead text-white">Use the interactive charts below to explore the Public Science Lab dataset</p>
+        <p>Choose a sample participant on the left side and the following data will be shown: </br> 
+            participant demographics, bacteria found, and the relative abundance of different </br>
+            microbial “species” (operational taxonomic units, OTUs) from the selected participant</p>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Participant ID names -->
+                    <div class="card bg-light mb-3">
+                        <div class="card-header bg-dark text-white">Test Subject ID Number</div>
+                        <div class="card-body card border-dark">
+                        <select class = "form-control" id="selDataset" onchange="optionChanged(this.value)">
+                        <option selected="true" disabled="disabled">Select Subject</option>
+                        <!-- Filtered Search table options -->
+                        </select>
+                        </div>
+                    </div>
+                <!-- MetaData -->
+                <div class="card bg-light mb-3">
+                    <div class="card-header bg-dark text-white">Demographic Information</div>
+                    <div class="card-body card border-dark">
+                      <p class="card-text"> 
+                        <div id="sample-metadata" class="panel-body"></div>
+                        <!-- Populated Demographics -->
+                        <small class ="text-muted" >Note: </small>
+                        <small  class ="text-muted">BBTYPE - Belly Button type</small>
+                        <small  class ="text-muted">WFREQ - Washing Frequency</small>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card bg-light mb-3">
+                    <div class="card-body bg-white">
+                            <!-- Bar chart -->
+                        <div class="d-flex justify-content-around" id="bar"></div>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-md-12 ml-5">
+                <div class="card bg-light mb-3">
+                    <div class="card-body bg-white">
+                        <!-- Bubble Chart -->
+                        <div class="d-flex justify-content-around" id="bubble"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer><p><small class="text-muted">For more information about this study visit <a href="http://robdunnlab.com/projects/belly-button-biodiversity/">The Public Science Lab - Belly Button Biodiversity</a> webpage</small></p></footer>
+    <!-- Bootstrap jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- Linking to JS files -->
+    <script src="app.js"></script>
+</body>
+</html>
