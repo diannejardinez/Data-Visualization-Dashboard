@@ -56,12 +56,15 @@ function createPlot (indexNumber) {
     d3.json("data/samples.json").then((importedData) => {
       // Use the map method with the arrow function to return all out_ids and their top 10 values
       var newIds = importedData.samples.map(data=>(data.otu_ids).slice(0,10))
+      var newIdsBubble = importedData.samples.map(data=>(data.otu_ids))
 
       // Use the map method with the arrow function to return all sample_values and their top 10 values
       var newLabels = importedData.samples.map(data=>(data.otu_labels).slice(0,10))
+      var newLabelsBubble = importedData.samples.map(data=>(data.otu_labels))
 
       // Use the map method with the arrow function to return all sample_values and their top 10 values
       var newValues = importedData.samples.map(data=>(data.sample_values).slice(0,10))
+      var newValuesBubble = importedData.samples.map(data=>(data.sample_values))
 
       function barChart() {
         var barChart = {
@@ -94,13 +97,13 @@ function createPlot (indexNumber) {
       
       function bubbleChart() {
         var bubbleChart = {
-          x: newIds[indexNumber],
-          y: newValues[indexNumber],
-          text: newLabels[indexNumber],
+          x: newIdsBubble[indexNumber],
+          y: newValuesBubble[indexNumber],
+          text: newLabelsBubble[indexNumber],
           mode: 'markers',
           marker: {
-            color: newIds[indexNumber],
-            size: newValues[indexNumber]
+            color: newIdsBubble[indexNumber],
+            size: newValuesBubble[indexNumber]
           }
         };
         
