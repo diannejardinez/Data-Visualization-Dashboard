@@ -6,10 +6,10 @@
 
 
 ## Dashboard  Level 1
-**Objective:** Creating an interactive dashboard that allows for displaying dataset for specific value using Javascript, Bootstrap 4HTML, D3.js, and Plotly.js.
+**Objective:** Creating an interactive dashboard that allows for displaying dataset for a specific value using Javascript, Bootstrap 4 HTML and CSS, D3.js, and Plotly.js.
+
 
 Website includes:
-- Home Page
-    - Belly Button Biodiversity dataset filtered by Participant ID
-        - Dataset displayed through Bar Chart
-        - Dataset displayed through Bubble Chart
+- Belly Button Biodiversity dataset filtered by Participant ID through dropdown selection
+- Dataset displayed through Bar Chart
+- Dataset displayed through Bubble Chart
