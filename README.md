@@ -2,7 +2,7 @@
 
 **Webpage Level 1:** https://diannejardinez.github.io/Data-Visualization-Dashboard/lvl1
 
-**Webpage Level 2:** https://diannejardinez.github.io/Data-Visualization-Dashboard/lvl1
+**Webpage Level 2:** https://diannejardinez.github.io/Data-Visualization-Dashboard
 
 ## Dashboard Level 1
 **Objective:** Creating an interactive dashboard that allows for displaying dataset for a specific value using Javascript, Bootstrap 4 HTML and CSS, D3.js, and Plotly.js.
