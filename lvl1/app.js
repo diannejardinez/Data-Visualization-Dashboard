@@ -78,7 +78,7 @@ function createPlot (indexNumber) {
         };
 
         var layout = {
-          height: 550,
+          height: 500,
           width: 350,
           title:'<b>Top Ten Microbial Diversity</b>',
           yaxis: {

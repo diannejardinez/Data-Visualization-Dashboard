@@ -16,7 +16,7 @@
 </head>
 <body class="bg-light">
 <!--     Jumbotron header -->
-    <section id="header" class="jumbotron text-center bg-info">
+    <section id="header" class="jumbotron text-center bg-danger">
         <h1 class="display-3 font-weight-bold">Biodiversity Dashboard</h1>
         <p class="lead text-white">Use the interactive charts below to explore the Public Science Lab dataset</p>
         <p>Choose a sample participant on the left side and the following data will be shown: </br> 
@@ -50,19 +50,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-8">
                 <div class="card bg-light mb-3">
                     <div class="card-body bg-white">
                             <!-- Bar chart -->
                         <div class="d-flex justify-content-around" id="bar"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-light mb-3">
-                    <div class="card-body bg-white">
-                            <!-- Gauge chart -->
-                        <div class="d-flex justify-content-around" id="gauge"></div>
                     </div>
                 </div>
             </div>
@@ -86,6 +78,5 @@
         crossorigin="anonymous"></script>
     <!-- Linking to JS files -->
     <script src="app.js"></script>
-    <script src="bonus.js"></script>
 </body>
 </html>
